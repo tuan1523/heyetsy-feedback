@@ -1,14 +1,14 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-  <title>Phản hồi HeyEtsy</title>
+  <title>HeyEtsy Feedback</title>
 </head>
 <body>
-  <h1>Đang chuyển hướng...</h1>
-  <p>Vui lòng đợi trong khi chúng tôi chuyển bạn đến khảo sát phù hợp.</p>
-  <p>Nếu ngôn ngữ không đúng, chọn: 
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd39ZP8oMUv7n7Wwv0cR5XZL5IzgR20uMK7hNL3wMm7G3tjZA/viewform?hl=vi">Tiếng Việt</a> | 
-    <a href="https://docs.google.com/forms/d/e/[FORM_ID]/viewform?hl=en">English</a>
+  <h1>Redirecting...</h1>
+  <p>Please wait while we redirect you to the appropriate survey.</p>
+  <p>If the language is incorrect, select: 
+    <a href="https://docs.google.com/forms/d/1PbjT7BLMIrMEC3fdxR-ivYMpV5CPAlfxtnnJJp1KNxA/viewform">Tiếng Việt</a> | 
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd39ZP8oMUv7n7Wwv0cR5XZL5IzgR20uMK7hNL3wMm7G3tjZA/viewform">English</a>
   </p>
   <script>
     fetch('https://ipapi.co/json/')
@@ -16,14 +16,14 @@
       .then(data => {
         const country = data.country_code;
         if (country === 'VN') {
-          window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSd39ZP8oMUv7n7Wwv0cR5XZL5IzgR20uMK7hNL3wMm7G3tjZA/viewform?hl=vi';
+          window.location.href = 'https://docs.google.com/forms/d/1PbjT7BLMIrMEC3fdxR-ivYMpV5CPAlfxtnnJJp1KNxA/viewform';
         } else {
-          window.location.href = 'https://docs.google.com/forms/d/e/[FORM_ID]/viewform?hl=en';
+          window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSd39ZP8oMUv7n7Wwv0cR5XZL5IzgR20uMK7hNL3wMm7G3tjZA/viewform';
         }
       })
       .catch(error => {
         console.error('Lỗi:', error);
-        window.location.href = 'https://docs.google.com/forms/d/e/[FORM_ID]/viewform?hl=en';
+        window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSd39ZP8oMUv7n7Wwv0cR5XZL5IzgR20uMK7hNL3wMm7G3tjZA/viewform';
       });
   </script>
 </body>
